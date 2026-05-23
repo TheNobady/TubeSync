@@ -107,8 +107,10 @@ export default function RoomPage({
 
       const client = new Client({
         // SockJS factory — required when backend uses withSockJS()
-        webSocketFactory: () =>
-          new (SockJS as any)(`http://localhost:8080/ws?token=${encodeURIComponent(token)}`),
+        webSocketFactory: () => {
+          const wsUrl = process.env.NEXT_PUBLIC_WS_URL ?? "http://localhost:8080/ws";
+          return new (SockJS as any)(`${wsUrl}?token=${encodeURIComponent(token)}`);
+        },
 
         reconnectDelay: 0, // we handle reconnect ourselves for better UX
         heartbeatIncoming: 10000,
