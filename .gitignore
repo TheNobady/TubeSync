@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+.m2/
+
+# Build outputs
+.next/
+out/
+target/
+*.class
+*.jar
+*.war
+
+# Environment secrets
+.env.local
+.env.*.local
+*.env
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
