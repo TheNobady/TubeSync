@@ -1,4 +1,4 @@
-# TubeSync Monorepo
+# TubeSync
 
 ## Stack
 - **Frontend**: Next.js 15 (App Router) + Tailwind CSS + NextAuth
